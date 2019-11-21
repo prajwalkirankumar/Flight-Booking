@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+	var targetContainer = document.getElementById("this-div");
+	var eventSource = new EventSource("http://localhost:5000/stream");
+	eventSource.addEventListener('greeting', function(event) {
+    var data = JSON.parse(event.data);
+    // do what you want with this data
+    console.log(data);
+}, false);
+</script>
+</head>
+<body>
+	<div id="this-div"></div>
+</body>
+</html>
+

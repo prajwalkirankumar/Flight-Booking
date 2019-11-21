@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<h2>Chat Messages</h2>
+<div  id="chats">
+
+<div *ngFor="let c of chats" class="container">
+  <img src="/assets/bandmember.png" alt="Avatar" style="width:100%;" class="c.class">
+  <p>{{c.text}}</p>
+  <span class="c.time">11:00</span>
+</div>
+
+<!-- <div class="container">
+  <img src="/assets/bandmember.png" alt="Avatar" style="width:100%;">
+  <p>Hello. How are you today?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="/assets/bandmember.png" alt="Avatar" class="right" style="width:100%;">
+  <p>Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="/assets/bandmember.png" alt="Avatar" style="width:100%;">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="/assets/bandmember.png" alt="Avatar" class="right" style="width:100%;">
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div> -->
+
+<div class="container darker">
+  <input [(ngModel)]="sendertext" id = "send"/>
+  <button id="button" (click)="send()">SEND</button>
+</div>
+</div>
+</body>
+</html>
